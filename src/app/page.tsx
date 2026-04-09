@@ -134,7 +134,7 @@ export default function Home() {
             {AVATAR}
           </div>
           <div>
-            <h2 className="font-bold text-lg tracking-wide text-white">UMBRA</h2>
+            <h2 className={`font-bold text-lg tracking-wide ${isDark ? "text-white" : "text-zinc-900"}`}>UMBRA</h2>
             <p className={`text-xs ${isDark ? "text-zinc-400" : "text-slate-600"}`}>AI AGENT DASHBOARD</p>
           </div>
         </div>
