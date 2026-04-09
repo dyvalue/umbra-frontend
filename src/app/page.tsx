@@ -181,7 +181,7 @@ export default function Home() {
               <AvatarFallback className="bg-zinc-700 text-white">{AVATAR}</AvatarFallback>
             </Avatar>
             <div>
-              <h1 className="font-semibold">{MODEL_NAME}</h1>
+              <h1 className={`font-semibold ${isDark ? "text-white" : "text-zinc-900"}`}>{MODEL_NAME}</h1>
               <p className={`text-xs ${isDark ? "text-zinc-400" : "text-slate-500"}`}>AI AGENT ONLINE</p>
             </div>
           </div>
