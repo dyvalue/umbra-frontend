@@ -130,12 +130,12 @@ export default function Home() {
       {/* Sidebar */}
       <div className={`w-64 border-r flex flex-col ${sidebarBg}`}>
         <div className="p-4 flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center text-2xl shadow-lg shadow-purple-500/30">
+          <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-2xl shadow-lg">
             {AVATAR}
           </div>
           <div>
-            <h2 className="font-bold text-lg tracking-wide">UMBRA</h2>
-            <p className={`text-xs ${isDark ? "text-zinc-500" : "text-slate-500"}`}>數字守護者</p>
+            <h2 className="font-bold text-lg tracking-wide text-white">UMBRA</h2>
+            <p className="text-xs text-zinc-400">AI AGENT DASHBOARD</p>
           </div>
         </div>
         <Separator />
@@ -160,7 +160,7 @@ export default function Home() {
         <div className={`p-3 border-t ${isDark ? "border-zinc-800" : "border-slate-200"}`}>
           <div className={`flex items-center gap-3 p-3 rounded-lg ${isDark ? "bg-zinc-800/50" : "bg-slate-100"}`}>
             <Avatar className="w-8 h-8">
-              <AvatarFallback className="bg-gradient-to-br from-purple-600 to-pink-600 text-white text-sm font-bold">{AVATAR}</AvatarFallback>
+              <AvatarFallback className="bg-zinc-700 text-white text-sm font-bold">{AVATAR}</AvatarFallback>
             </Avatar>
             <div className="flex-1 min-w-0">
               <p className={`text-sm font-medium ${textClass}`}>{MODEL_NAME}</p>
@@ -178,11 +178,11 @@ export default function Home() {
         <header className={`h-16 border-b flex items-center justify-between px-6 ${isDark ? "border-zinc-800" : "border-slate-200"}`}>
           <div className="flex items-center gap-3">
             <Avatar className="w-8 h-8">
-              <AvatarFallback className="bg-gradient-to-br from-purple-600 to-pink-600 text-white">{AVATAR}</AvatarFallback>
+              <AvatarFallback className="bg-zinc-700 text-white">{AVATAR}</AvatarFallback>
             </Avatar>
             <div>
               <h1 className="font-semibold">{MODEL_NAME}</h1>
-              <p className={`text-xs ${isDark ? "text-zinc-500" : "text-slate-500"}`}>隨時候命</p>
+              <p className={`text-xs ${isDark ? "text-zinc-500" : "text-slate-500"}`}>AI AGENT ONLINE</p>
             </div>
           </div>
           <Button
@@ -202,10 +202,10 @@ export default function Home() {
               <div key={msg.id} className={`flex gap-3 ${msg.role === "user" ? "flex-row-reverse" : ""}`}>
                 {msg.role === "assistant" && (
                   <Avatar className="w-8 h-8 flex-shrink-0">
-                    <AvatarFallback className="bg-gradient-to-br from-purple-600 to-pink-600 text-white text-sm font-bold">{AVATAR}</AvatarFallback>
+                    <AvatarFallback className="bg-zinc-700 text-white text-sm font-bold">{AVATAR}</AvatarFallback>
                   </Avatar>
                 )}
-                <Card className={`max-w-[75%] p-4 ${msg.role === "user" ? "bg-gradient-to-br from-purple-600 to-pink-600 text-white border-0 shadow-lg shadow-purple-500/20" : `${cardBg} shadow-sm`}`}>
+                <Card className={`max-w-[75%] p-4 ${msg.role === "user" ? "bg-zinc-700 text-white border-0 shadow-lg" : `${cardBg} shadow-sm`}`}>
                   <div className={`whitespace-pre-wrap text-sm leading-relaxed ${msg.role === "user" ? "" : textClass}`}>{msg.content}</div>
                   <p className={`text-xs mt-2 ${msg.role === "user" ? "text-purple-200" : isDark ? "text-zinc-500" : "text-slate-500"}`}>
                     {msg.timestamp.toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" })}
@@ -223,13 +223,13 @@ export default function Home() {
             {isLoading && (
               <div className="flex gap-3">
                 <Avatar className="w-8 h-8 flex-shrink-0">
-                  <AvatarFallback className="bg-gradient-to-br from-purple-600 to-pink-600 text-white text-sm font-bold">{AVATAR}</AvatarFallback>
+                  <AvatarFallback className="bg-zinc-700 text-white text-sm font-bold">{AVATAR}</AvatarFallback>
                 </Avatar>
                 <Card className={`${cardBg} p-4`}>
                   <div className="flex gap-1">
-                    <span className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
-                    <span className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
-                    <span className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
+                    <span className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
+                    <span className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
+                    <span className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
                   </div>
                 </Card>
               </div>
