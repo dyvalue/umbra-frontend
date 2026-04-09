@@ -135,7 +135,7 @@ export default function Home() {
           </div>
           <div>
             <h2 className="font-bold text-lg tracking-wide text-white">UMBRA</h2>
-            <p className="text-xs text-zinc-400">AI AGENT DASHBOARD</p>
+            <p className={`text-xs ${isDark ? "text-zinc-400" : "text-slate-600"}`}>AI AGENT DASHBOARD</p>
           </div>
         </div>
         <Separator />
@@ -182,7 +182,7 @@ export default function Home() {
             </Avatar>
             <div>
               <h1 className="font-semibold">{MODEL_NAME}</h1>
-              <p className={`text-xs ${isDark ? "text-zinc-500" : "text-slate-500"}`}>AI AGENT ONLINE</p>
+              <p className={`text-xs ${isDark ? "text-zinc-400" : "text-slate-500"}`}>AI AGENT ONLINE</p>
             </div>
           </div>
           <Button
@@ -207,7 +207,7 @@ export default function Home() {
                 )}
                 <Card className={`max-w-[75%] p-4 ${msg.role === "user" ? "bg-zinc-700 text-white border-0 shadow-lg" : `${cardBg} shadow-sm`}`}>
                   <div className={`whitespace-pre-wrap text-sm leading-relaxed ${msg.role === "user" ? "" : textClass}`}>{msg.content}</div>
-                  <p className={`text-xs mt-2 ${msg.role === "user" ? "text-purple-200" : isDark ? "text-zinc-500" : "text-slate-500"}`}>
+                  <p className={`text-xs mt-2 ${msg.role === "user" ? (isDark ? "text-zinc-300" : "text-slate-300") : isDark ? "text-zinc-500" : "text-slate-500"}`}>
                     {msg.timestamp.toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" })}
                   </p>
                 </Card>
